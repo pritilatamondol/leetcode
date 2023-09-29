@@ -1,9 +1,11 @@
 // 3 ways to reverse a string
-function reverseStr(str) {
+const str = "I am testing";
+function reverseStrUsingInbuilt(str) {
     return str.split("").reverse().join("");
 }
-//console.log(reverseStr("This is shilpa."));
+console.log(reverseStrUsingInbuilt(str));
 
+//In normal way
 function reverseString(str) {
   var newString = "";
   for (var i = str.length - 1; i >= 0; i--) {
@@ -13,6 +15,7 @@ function reverseString(str) {
 }
 reverseString("hello");
 
+//Recursive way
 function reverseString(str) {
   if (str === "") return "";
   else
