@@ -1,6 +1,6 @@
-const numb = [1,2,3,18,7,6,9,12,13,78]
+const numbs = [1,2,3,18,7,6,9,12,13,78]
 
-function isPrime(num) {
+function findPrimeNumbers(num) {
     if (num <= 1)
         return false;
     for (let start = 2; start < num; start++){
@@ -10,9 +10,22 @@ function isPrime(num) {
     }
     return true;
 }
- let primeNum = numb.filter(isPrime);
+ let primeNum = numbs.filter(findPrimeNumbers);
 console.log(primeNum);
 
+//Is a prime number
+function isPrime(num) {
+    for(let i=0; num>i;i++) {
+      if(num%i == 0){
+        return "Not prime number";
+      }
+    }
+    return "Prime number"
+}
+
+console.log( "isPrime: " + isPrime("10"));
+
+//Arrow function
 let add = (x,y) => x + y; //arrow function
     
 const numb1 = [1, 2, 3, 5];
