@@ -7,7 +7,7 @@
 var twoSum = function(nums, target) {
     
     for(let i=0; i<nums.length; i++) {
-       for(let j=i+1; i<nums.length; j++) {  
+       for(let j=i+1; j<nums.length; j++) {  
          if(nums[i]+ nums[j] === target) {
             return [i,j];
          }
@@ -16,6 +16,25 @@ var twoSum = function(nums, target) {
     return null;
 };
 */
+function toSum(nums, target) {
+    const prevValues ={}
+    for(let i=0; i<nums.length; i++) {
+        const currentValue = nums[i];
+        const neededValue = target - currentValue;
+        console.log("neededValue:" + neededValue);
+        const index2 = prevValues[neededValue];
+        if(index2 != null){
+            return [index2,i]
+        }else{
+            prevValues[currentValue] = i;
+        }
+    }
+}
+let indices = toSum([2,7,8,6,9,3], 9);
+
+console.log(indices);
+
+//Using Map and set
 const  nums = [3,8,7,1,2,10], target = 11;
 var twoSum = function(nums, target) {
     let map = new Map;
