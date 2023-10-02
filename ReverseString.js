@@ -15,6 +15,19 @@ function reverseString(str) {
 }
 reverseString("hello");
 
+function reverseString1( originalStr){ 
+    let reversedStr = "";
+    console.log("\nOriginal string: " + originalStr);
+        
+    for (let i = 0; i < originalStr.length; i++) {
+        
+        reversedStr = originalStr.charAt(i) + reversedStr;
+        console.log("After inside for :" + reversedStr);
+    }
+    return reversedStr;
+}
+
+
 //Recursive way
 function reverseString(str) {
   if (str === "") return "";
